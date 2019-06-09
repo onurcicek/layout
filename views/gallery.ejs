@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!--<link rel="stylesheet" href="/stylesheets/justifiedGallery.min.css">-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">    <link rel="stylesheet" href="/stylesheets/finaltilesgallery.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="jumbotron">
+        <h1 class="display-4">GALLERY PAGE</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+            featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="/index" role="button">Geri dön</a>
+    </div>
+
+    <div class="bg-modal">
+        <div class="modal-contentt">
+            <div class="closerr">+</div>
+            <img class="imgavatar" style="width: 100px" src="/images/avatar.png" alt="">
+            <form action="index/load" enctype="multipart/form-data" method="POST">
+                <input type="file">
+                <input type="submit" class="btn btn-success">
+            </form>
+
+        </div>
+    </div>
+
+<div style="width:1800px; padding-left:109px">
+    <div class="final-tiles-gallery social-icons-right social-icons-none effect-zoom-in effect-speed-medium .caption-color-dark">
+        <div class="ftg-items">
+            <% Bedirhan.forEach(function(element){ %>
+            <div class="tile">
+                <a class="tile-inner" href="<%=element.fileway %>.jpg">
+                    <img class="item"
+                        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        data-src="<%=element.fileway %>.jpg" />
+   
+                </a>
+               
+                
+            </div>
+            <% }); %>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<div class="bg-modal">
+    <div class="modal-contentt">
+        <div class="closerr">+</div>
+        <img class="imgavatar" style="width: 100px" src="/images/avatar.png" alt="">
+        <form action="/index/load" enctype="multipart/form-data" method="POST">
+            <input type="file" name="photo" type="photo">
+            <input type="submit" class="btn btn-success">
+        </form>
+
+    </div>
+</div>
+
+
+</body>
+
+
+<script src="/javascripts/custom.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+<script src="/javascripts/jquery.finaltilesgallery.js"></script>
+<script>
+    var buttonp = document.querySelector('#searchbutton');
+    buttonp.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        var lolo = document.querySelector('#lolo');
+        lolo.textContent = "Search it man";
+    })
+
+
+
+
+
+</script>
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        $('.final-tiles-gallery').finalTilesGallery({
+            margin: 5,
+            gridSize: 20,
+            layout: 'final',
+            imageSizeFactor: [[4000, .9], [1024, .8], [800, .7], [600, .6], [480, .5]],
+            
+        });
+    });
+</script>
+
+
+
+
+</html>

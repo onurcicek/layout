@@ -1,0 +1,62 @@
+body {
+
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.bg-modal {
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top:0;
+  display:none;
+  justify-content: center;
+  align-items:center;
+
+}
+
+.modal-contentt{
+
+  width:500px;
+  height:300px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding:20px;
+  position: relative;
+
+
+}
+
+
+.closerr{
+
+  font-size: 42px;
+  position: absolute;
+  top:0;
+  transform:rotate(45deg);
+  cursor:pointer;
+  
+
+
+}
+
+
+
+.loadmore{
+
+  display:none;
+
+}
+
+.loadbutton{
+  text-align: center;
+
+}
+
+
+

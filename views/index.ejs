@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/finaltilesgallery.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+   
+  <!--<link rel="stylesheet" href="/stylesheets/justifiedGallery.min.css">-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+<style>
+.final-tiles-gallery .tile img.item { filter: grayscale(100%); }
+
+</style>
+
+
+        
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+  <!-- <form action="/upload/save" method="post" enctype="multipart/form-data">
+                    <input type="file" accept="image/*" name="photo">
+                    <input type="submit" value="upload">
+                </form>-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/index/load">Gallery <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <button id="nav-upl" class="nav-link">Upload</button>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button id="searchbutton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <h1 id="lolo" class="display-4">New Photos!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+      featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a class="btn btn-primary btn-lg" href="/index/load" role="button">WANT TO VISIT GALLERY PAGE</a>
+  </div>
+
+ 
+
+<div class="container">
+        <div class="final-tiles-gallery social-icons-right social-icons-none effect-zoom-in effect-speed-medium .caption-color-dark">
+          <div class="ftg-items">
+           
+            <% Bedirhan.forEach(function(element){ %>
+            <div class="tile">
+              <a class="tile-inner" href="<%=element.fileway %>.jpg">
+                <img class="item" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  data-src="<%=element.fileway %>.jpg" />
+            
+              </a>
+            
+            
+            </div>
+            <% }); %>
+           
+        
+            </div>
+          </div>
+
+
+  <div style="padding-left: 500px; padding-top: 50px">
+    <button class="btn btn-alert" name="loadMore" id="loadMore">Load More</button>
+  </div>
+</div>
+
+ 
+        
+        <div class="bg-modal">
+          <div class="modal-contentt">
+            <div class="closerr">+</div>
+            <img class="imgavatar" style="width: 100px" src="/images/avatar.png" alt="">
+            <form action="/index/load" enctype="multipart/form-data" method="POST">
+              <input type="file" name="photo" type="photo">
+              <input type="submit" class="btn btn-success">
+            </form>
+        
+          </div>
+        </div>
+
+
+</body>
+
+
+<script src = "/javascripts/custom.js" ></script>
+<script src="/javascripts/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="/javascripts/bringphoto.js"></script>
+<script src="/javascripts/jquery.finaltilesgallery.js"></script>
+
+    <script>
+      bringPhoto();
+    </script>
+
+
+
+
+</html>
